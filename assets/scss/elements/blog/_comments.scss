@@ -1,7 +1,7 @@
 #comments {
   border-top: $muted-border;
   padding-top: $spacing-sm;
-  margin: $spacing-xs 0 $spacing;
+  margin: $spacing-xs auto $spacing;
   input:not([type="submit"]), textarea {
     width: 100%;
   }

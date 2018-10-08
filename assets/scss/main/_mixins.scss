@@ -67,5 +67,12 @@
       opacity: .9;
     }
   }
+}
 
+@mixin gutenberg-container-adapted() {
+  &.single-post-container, &.single-page-container {
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }

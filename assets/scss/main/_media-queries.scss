@@ -1,11 +1,13 @@
 @media (min-width: #{$tablet-sm}) {
   @include grid-container--tablet-sm();
   @include grid--tablet-sm();
+  @include gtb-container--tablet-sm();
 }
 
 @media (min-width: #{$tablet}) {
   @include grid-container--tablet();
   @include grid--tablet();
+  @include gtb-container--tablet();
   @include sidebar--tablet();
   @include typography--tablet();
 }
@@ -13,6 +15,7 @@
 @media (min-width: #{$laptop}) {
   @include grid-container--laptop();
   @include grid--laptop();
+  @include gtb-container--laptop();
   @include nav-toggle--laptop();
   @include nav-menu--laptop();
   @include nav-menu-centered--laptop();
@@ -28,4 +31,5 @@
 @media (min-width: #{$desktop}) {
   @include grid-container--desktop();
   @include grid--desktop();
+  @include gtb-container--desktop();
 }
