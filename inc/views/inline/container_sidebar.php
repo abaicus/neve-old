@@ -30,18 +30,18 @@ class Container_Sidebar extends Base_Inline {
 	private function container_style() {
 		$container_width = get_theme_mod( 'neve_container_width' );
 		$container_width = json_decode( $container_width, true );
-		if( empty( $container_width ) ) {
+		if ( empty( $container_width ) ) {
 			return;
 		}
 
-		$settings        = array(
+		$settings  = array(
 			array(
 				'css_prop' => 'max-width',
 				'value'    => $container_width,
 				'suffix'   => 'px',
 			),
 		);
-		$selectors       = '.container, 
+		$selectors = '.container, 
 		.nv-single-post-wrap > *:not(.nv-content-wrap), 
 		.nv-single-post-wrap .nv-content-wrap > *:not(.alignwide):not(.alignfull), 
 		.nv-single-page-wrap > *:not(.nv-content-wrap), 
@@ -49,10 +49,13 @@ class Container_Sidebar extends Base_Inline {
 
 		$this->add_responsive_style( $settings, $selectors );
 
-		$alignwide_width = $container_width; //+100px
-		array_walk( $alignwide_width, function ( &$item1 ) {
-			$item1 += 100;
-		} );
+		$alignwide_width = $container_width; // +100px
+		array_walk(
+			$alignwide_width,
+			function ( &$item1 ) {
+				$item1 += 100;
+			}
+		);
 
 		$settings = array(
 			array(
